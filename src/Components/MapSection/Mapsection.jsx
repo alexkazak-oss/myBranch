@@ -59,7 +59,7 @@ const MapSection = () => {
 		<div className={style.wrapper}>
 			<div className={style.container}>
 				<h3
-					className={style.title}>{`Координаты центра: ${mapCenter.lat.toFixed(
+					className={style.title}>{`Position: ${mapCenter.lat.toFixed(
 					4,
 				)}, ${mapCenter.lng.toFixed(4)}`}</h3>
 				<div className={style.content}>

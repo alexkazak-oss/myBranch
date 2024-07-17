@@ -1,0 +1,55 @@
+.wrapper {
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+}
+
+.title {
+	margin-bottom: 20px;
+}
+
+.contentBlock {
+	padding: 10px;
+	margin: 5px;
+}
+
+.contentBlock--one {
+	background-color: lightblue;
+}
+
+.contentBlock--two {
+	background-color: lightgreen;
+}
+.looper {
+	overflow: hidden;
+	position: relative;
+	width: 100%; /* Убедитесь, что контейнер имеет ширину */
+}
+
+.looper__innerList {
+	display: flex;
+	animation: looperAnimation linear infinite;
+	width: max-content; /* Чтобы содержимое занимало необходимую ширину */
+}
+
+.looper__listInstance {
+	flex-shrink: 0;
+	display: flex;
+}
+
+@keyframes looperAnimation {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-100%);
+	}
+}
+
+[data-animate='true'] .looper__innerList {
+	animation-play-state: running;
+}
+
+[data-animate='false'] .looper__innerList {
+	animation-play-state: paused;
+}

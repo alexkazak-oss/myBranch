@@ -1,0 +1,39 @@
+.description {
+  margin-bottom: 20px;
+}
+
+.looper {
+  overflow: hidden;
+  position: relative;
+}
+
+.looper__innerList {
+  display: flex;
+  animation: looperAnimation linear infinite;
+}
+
+.looper__listInstance {
+  flex-shrink: 0;
+}
+
+.contentBlock {
+  padding: 10px;
+  margin: 5px;
+}
+
+.contentBlock--one {
+  background-color: lightblue;
+}
+
+.contentBlock--two {
+  background-color: lightgreen;
+}
+
+@keyframes looperAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
