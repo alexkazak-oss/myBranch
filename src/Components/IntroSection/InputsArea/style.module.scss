@@ -1,0 +1,48 @@
+@import './../../../styles/roots';
+
+.container {
+	margin: 0 auto;
+	width: 70%;
+	background-color: $pink;
+	height: 152px;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	color: $white;
+
+	form {
+		display: flex;
+		align-items: center;
+		height: 50px;
+		gap: 10px;
+		width: 90%;
+	}
+
+	input[type='button'] {
+		background-color: $blue;
+		color: $white;
+	}
+
+	input,
+	select,
+	input[type='text'] {
+		color: $black;
+		background-color: $white;
+		height: 38px;
+		max-width: 215px;
+		width: 100%;
+	}
+
+	select {
+		border: none;
+		background-color: $white;
+		color: $black;
+		outline: none;
+	}
+
+	select,
+	input[type='button'] {
+		cursor: pointer;
+	}
+}

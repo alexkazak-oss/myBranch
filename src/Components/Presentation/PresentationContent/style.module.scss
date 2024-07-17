@@ -1,0 +1,103 @@
+@import './../../../styles/roots';
+
+.wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+
+	.container {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: flex-start;
+		max-width: 550px;
+
+		.titleContainer {
+			display: block;
+
+			.title {
+				color: $white;
+				font-size: 36px;
+			}
+		}
+
+		.textContainer {
+			padding-top: 20px;
+			display: block;
+
+			.text {
+				color: $white;
+				font-size: 22px;
+			}
+		}
+
+		.buttonContainer {
+			padding-top: 25px;
+			display: flex;
+			align-items: center;
+		}
+	}
+
+	.button {
+		--border-width: 2px;
+		--border-radius: 1px;
+		--color-1: #4b39f1;
+		--color-2: #ce22de;
+	}
+
+	.button {
+		font-weight: bold;
+		letter-spacing: 1px;
+		color: #ddd;
+		width: 220px;
+		position: relative;
+		background: linear-gradient(to right, rgb(36, 28, 118), rgb(139, 31, 105)),
+			linear-gradient(to right, rgb(29, 59, 194), rgb(184, 32, 154));
+		background-position: var(--border-radius) 0, var(--border-radius) 100%;
+		background-repeat: no-repeat;
+		background-size: calc(100% - var(--border-radius) - var(--border-radius))
+			var(--border-width);
+		padding: 14px 24px;
+		border-radius: var(--border-radius);
+		border: none;
+	}
+
+	.button:hover .titleBtn {
+		transition: 0.2s ease-in-out;
+		letter-spacing: 2px;
+	}
+
+	.titleBtn {
+		font-size: 18px;
+		background: $linear-gradient;
+		-webkit-background-clip: text;
+		background-clip: text;
+		color: transparent;
+	}
+
+	.button:before,
+	.button:after {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+	}
+
+	.button:before {
+		left: 0;
+		border: var(--border-width) solid var(--color-1);
+		border-top-left-radius: var(--border-radius);
+		border-bottom-left-radius: var(--border-radius);
+		border-right-color: transparent;
+	}
+
+	.button:after {
+		position: absolute;
+		right: 0;
+		border: var(--border-width) solid var(--color-2);
+		border-top-right-radius: var(--border-radius);
+		border-bottom-right-radius: var(--border-radius);
+		border-left-color: transparent;
+	}
+}

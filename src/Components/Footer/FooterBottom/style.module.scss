@@ -1,0 +1,22 @@
+.bottomWrapper {
+	display: inline-flex;
+	padding: 10px 100px;
+}
+.iconsContainer {
+	height: 66px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.leftContainer {
+	display: flex;
+	align-items: center;
+	gap: 2em;
+}
+
+.rightContainer {
+	display: flex;
+	align-items: center;
+	gap: 2em;
+}

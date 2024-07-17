@@ -1,0 +1,15 @@
+.wrapper {
+	height: 100%;
+	width: 100%;
+	padding: 40px;
+
+	.textContainer {
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
+
+		p {
+			font-size: 16px;
+		}
+	}
+}

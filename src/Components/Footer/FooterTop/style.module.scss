@@ -1,0 +1,83 @@
+@import './../../../styles/roots';
+
+.footerTop {
+	display: flex;
+	flex-direction: column;
+	padding: 30px 97px 0 97px;
+	background-color: $blue;
+	user-select: none;
+	gap: 34px;
+}
+
+.topWrapper {
+	color: $white;
+
+	.presenceContainer {
+		display: flex;
+		flex-direction: column;
+		gap: 11px;
+
+		h3 {
+			font-size: 18px;
+		}
+	}
+
+	.countriesContainer {
+		width: 100%;
+		flex-wrap: wrap;
+		display: flex;
+		gap: 5px;
+
+		a {
+			color: $white;
+		}
+	}
+}
+
+.bottomWrapper {
+	display: flex;
+	justify-content: space-between;
+
+	h3 {
+		font-size: 20px;
+	}
+
+	.linksWrapper {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		.linksContainer {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			color: $white;
+			a {
+				color: $white;
+			}
+		}
+
+		.copyright p {
+			color: $white;
+			padding-bottom: 31px;
+		}
+	}
+	.socialsContainer {
+		display: flex;
+		flex-direction: column;
+		color: $white;
+		text-align: center;
+		align-items: center;
+		justify-content: space-between;
+		gap: 20px;
+
+		.socials {
+			height: 100%;
+			width: 100%;
+			display: flex;
+			justify-content: space-around;
+			a {
+				height: 100%;
+			}
+		}
+	}
+}
