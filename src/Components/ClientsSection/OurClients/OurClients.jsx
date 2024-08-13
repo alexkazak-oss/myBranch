@@ -14,6 +14,11 @@ const OurClients = () => {
 			<h3 className={style.title}>
 				Our <strong>Premium Clients</strong>
 			</h3>
+			<p className={style.text}>
+				We are proudly partnered with several organisations, hailing from
+				different industries, who have not only trusted our services, but have
+				invested their faith in!
+			</p>
 			<Looper speed={20} direction='left'>
 				<div className='contentBlock contentBlock--one'>
 					<img src={samsungImg} alt='' />

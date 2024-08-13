@@ -12,33 +12,33 @@ function getBounds(props) {
 
 // Компонент Square, который добавляет прямоугольник на карту
 function Square(props) {
-	const context = useLeafletContext() // Получаем контекст карты
-	const squareRef = useRef() // Создаем ссылку на прямоугольник
-	const propsRef = useRef(props) // Сохраняем пропсы в ref
+	const context = useLeafletContext() //  контекст карты
+	const squareRef = useRef() //  ссылка на прямоугольник
+	const propsRef = useRef(props) //  пропсы в ref
 
-	// Используем useEffect для создания и удаления прямоугольника
+	//  useEffect для создания и удаления прямоугольника
 	useEffect(() => {
-		squareRef.current = new L.Rectangle(getBounds(props)) // Создаем прямоугольник
-		const container = context.layerContainer || context.map // Получаем контейнер слоев карты
-		container.addLayer(squareRef.current) // Добавляем прямоугольник на карту
+		squareRef.current = new L.Rectangle(getBounds(props)) // прямоугольник
+		const container = context.layerContainer || context.map // контейнер слоев карты
+		container.addLayer(squareRef.current) // прямоугольник на карту
 
 		return () => {
-			container.removeLayer(squareRef.current) // Удаляем прямоугольник при размонтировании компонента
+			container.removeLayer(squareRef.current) // прямоугольник при размонтировании компонента
 		}
 	}, [])
 
-	// Используем useEffect для обновления прямоугольника при изменении пропсов center и size
+	//  useEffect для обновления прямоугольника при изменении пропсов center и size
 	useEffect(() => {
 		if (
 			props.center !== propsRef.current.center ||
 			props.size !== propsRef.current.size
 		) {
-			squareRef.current.setBounds(getBounds(props)) // Обновляем границы прямоугольника
+			squareRef.current.setBounds(getBounds(props)) //  границы прямоугольника
 		}
-		propsRef.current = props // Обновляем текущие пропсы
+		propsRef.current = props //  текущие пропсы
 	}, [props.center, props.size])
 
-	return null // Возвращаем null, так как прямоугольник добавляется непосредственно на карту
+	return null //  null, так как прямоугольник добавляется непосредственно на карту
 }
 
 function CenterTracker({setCenter}) {

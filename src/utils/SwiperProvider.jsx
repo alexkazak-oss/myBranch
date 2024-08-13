@@ -1,4 +1,4 @@
-import React, {createContext, useRef} from 'react'
+import React, {createContext} from 'react'
 import 'swiper/css'
 import {Navigation, Pagination} from 'swiper/modules'
 import 'swiper/scss/navigation'
